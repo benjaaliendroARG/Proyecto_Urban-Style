@@ -1,0 +1,491 @@
+/*====================================================
+
+        URBAN STYLE
+        ROPA.CSS
+
+        Estilos exclusivos de ropa.html
+
+====================================================*/
+
+
+/*====================================
+            TÍTULO
+=====================================*/
+
+.titulo-pagina{
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: 60px auto;
+
+    text-align: center;
+
+}
+
+.titulo-pagina h1{
+
+    font-size: 3rem;
+
+    color: var(--color-principal);
+
+    margin-bottom: 15px;
+
+}
+
+.titulo-pagina p{
+
+    font-size: 1.1rem;
+
+    color: var(--texto-secundario);
+
+}
+
+
+
+/*====================================
+        SECCIONES
+=====================================*/
+
+.categoria-ropa{
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    margin-bottom: 80px;
+
+}
+
+
+
+/*====================================
+        TITULOS
+=====================================*/
+
+.categoria-titulo{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+
+}
+
+.categoria-titulo i{
+
+    font-size: 2rem;
+
+    color: var(--color-principal);
+
+}
+
+.categoria-titulo h2{
+
+    font-size: 2.2rem;
+
+    color: var(--texto-principal);
+
+}
+
+
+
+/*====================================
+        TIPO PRODUCTO
+=====================================*/
+
+.tipo-producto{
+
+    margin-bottom: 70px;
+
+}
+
+.tipo-producto h3{
+
+    font-size: 1.5rem;
+
+    color: var(--color-principal);
+
+    margin-bottom: 25px;
+
+    border-left: 5px solid var(--color-principal);
+
+    padding-left: 15px;
+
+}
+
+
+
+/*====================================
+        CONTENEDOR
+=====================================*/
+
+.contenedor-productos{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+
+    gap: 30px;
+
+}
+/*====================================
+            FILTROS
+=====================================*/
+
+.filtros{
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    margin-bottom: 80px;
+
+    text-align: center;
+
+}
+
+.filtros h2{
+
+    font-size: 2rem;
+
+    color: var(--color-principal);
+
+    margin-bottom: 30px;
+
+}
+
+.contenedor-filtros{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+
+
+/*====================================
+        BOTONES FILTRO
+=====================================*/
+
+.btn-filtro{
+
+    padding: 12px 28px;
+
+    border: 2px solid var(--color-principal);
+
+    background: transparent;
+
+    color: var(--color-principal);
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    transition: var(--transicion);
+
+}
+
+.btn-filtro:hover{
+
+    background: var(--color-principal);
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--sombra);
+
+}
+
+.btn-filtro.activo{
+
+    background: var(--color-principal);
+
+    color: white;
+
+}
+
+
+
+/*====================================
+        EFECTOS PRODUCTOS
+=====================================*/
+
+.tipo-producto{
+
+    transition: .4s ease;
+
+}
+
+.tipo-producto:hover{
+
+    transform: translateY(-4px);
+
+}
+
+.tipo-producto h3{
+
+    transition: var(--transicion);
+
+}
+
+.tipo-producto:hover h3{
+
+    color: var(--color-hover);
+
+    border-left-color: var(--color-hover);
+
+}
+
+
+
+/*====================================
+        SEPARADOR
+=====================================*/
+
+.categoria-ropa{
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid rgba(0,0,0,.08);
+
+}
+
+.categoria-ropa:last-child{
+
+    border-bottom: none;
+
+}
+
+
+
+/*====================================
+        ANIMACIÓN
+=====================================*/
+
+.categoria-ropa{
+
+    animation: aparecer .8s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+/*====================================
+            RESPONSIVE
+=====================================*/
+
+@media (max-width: 992px){
+
+    .titulo-pagina h1{
+
+        font-size: 2.5rem;
+
+    }
+
+    .categoria-titulo{
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+    .categoria-titulo h2{
+
+        font-size: 2rem;
+
+    }
+
+    .contenedor-productos{
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+@media (max-width: 768px){
+
+    .titulo-pagina{
+
+        margin: 40px auto;
+
+    }
+
+    .titulo-pagina h1{
+
+        font-size: 2rem;
+
+    }
+
+    .titulo-pagina p{
+
+        font-size: 1rem;
+
+    }
+
+    .categoria-titulo{
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+    .categoria-titulo i{
+
+        font-size: 2.3rem;
+
+    }
+
+    .tipo-producto h3{
+
+        text-align: center;
+
+        border-left: none;
+
+        border-bottom: 3px solid var(--color-principal);
+
+        padding-bottom: 10px;
+
+        padding-left: 0;
+
+    }
+
+    .contenedor-productos{
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contenedor-filtros{
+
+        gap: 10px;
+
+    }
+
+    .btn-filtro{
+
+        width: 100%;
+
+        max-width: 250px;
+
+    }
+
+}
+
+
+
+@media (max-width: 480px){
+
+    .titulo-pagina h1{
+
+        font-size: 1.8rem;
+
+    }
+
+    .titulo-pagina p{
+
+        font-size: .95rem;
+
+    }
+
+    .categoria-titulo h2{
+
+        font-size: 1.7rem;
+
+    }
+
+    .filtros h2{
+
+        font-size: 1.5rem;
+
+    }
+
+    .tipo-producto{
+
+        margin-bottom: 50px;
+
+    }
+
+}
+
+
+
+/*====================================
+        SCROLL SUAVE
+=====================================*/
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+/*====================================
+        SELECCIÓN DE TEXTO
+=====================================*/
+
+::selection{
+
+    background: var(--color-principal);
+
+    color: white;
+
+}
+
+
+
+/*====================================
+        TRANSICIONES
+=====================================*/
+
+*{
+
+    transition: background .3s ease,
+                color .3s ease,
+                border-color .3s ease;
+
+}

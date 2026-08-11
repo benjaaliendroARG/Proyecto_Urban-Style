@@ -34,7 +34,7 @@ const productos = [
 
     {
         id: 3,
-        nombre: "Buzo Mujer Beige",
+        nombre: "Buzo Beige",
         categoria: "Mujer",
         tipo: "Buzos",
         precio: 52999,
@@ -44,7 +44,7 @@ const productos = [
 
     {
         id: 4,
-        nombre: "Remera Mujer",
+        nombre: "Remera",
         categoria: "Mujer",
         tipo: "Remeras",
         precio: 28999,
