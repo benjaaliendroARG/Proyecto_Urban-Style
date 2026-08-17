@@ -1,379 +1,648 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!--====================================
-                HEAD
-=====================================-->
-
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Urban Style | Tienda de Indumentaria</title>
+    <title>Urban Style | Moda Urbana</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-    <!--====================================
-                HEADER
-=====================================-->
+
+    <!--====================================================
+                        HEADER
+    ====================================================-->
 
     <header class="header">
 
-        <!-- Logo -->
+        <div class="header-contenedor">
 
-        <div class="logo">
 
-            <a href="index.html">
+            <!-- LOGO -->
 
-                <img src="img/logo.jpg" alt="Urban Style">
+            <a href="index.html" class="logo">
+
+                <img
+                    src="img/logo.png"
+                    alt="Urban Style"
+                >
 
             </a>
 
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar productos..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="btn-buscar"
+                    aria-label="Buscar"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ACCIONES -->
+
+            <div class="acciones-header">
+
+
+                <!-- FAVORITOS -->
+
+                <button
+                    type="button"
+                    class="btn-header"
+                    id="btn-favoritos"
+                    aria-label="Favoritos"
+                >
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <!-- CARRITO -->
+
+                <button
+                    type="button"
+                    class="btn-header carrito-header"
+                    id="btn-carrito"
+                    aria-label="Carrito"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span
+                        class="contador-carrito"
+                        id="contador-carrito"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+            </div>
+
         </div>
 
-        <!-- Buscador -->
 
-        <div class="buscador">
+        <!--================================================
+                            NAVBAR
+        =================================================-->
 
-            <input
-                type="text"
-                id="busqueda"
-                placeholder="Buscar productos...">
+        <nav class="navbar">
 
-            <button id="btn-buscar">
+            <div class="nav-contenedor">
 
-                <i class="fa-solid fa-magnifying-glass"></i>
 
-            </button>
+                <a
+                    href="index.html"
+                    class="nav-link activo"
+                >
+                    Inicio
+                </a>
 
-        </div>
 
-        <!-- Iconos -->
+                <a
+                    href="html/ropa.html"
+                    class="nav-link"
+                >
+                    Ropa
+                </a>
 
-        <div class="acciones">
 
-            <button class="btn-favoritos">
+                <a
+                    href="html/calzado.html"
+                    class="nav-link"
+                >
+                    Calzado
+                </a>
 
-                <i class="fa-solid fa-heart"></i>
 
-            </button>
+                <a
+                    href="html/accesorios.html"
+                    class="nav-link"
+                >
+                    Accesorios
+                </a>
 
-            <button class="btn-carrito">
 
-                <i class="fa-solid fa-cart-shopping"></i>
+                <a
+                    href="html/contacto.html"
+                    class="nav-link"
+                >
+                    Contacto
+                </a>
 
-                <span id="contador-carrito">0</span>
 
-            </button>
+            </div>
 
-        </div>
+        </nav>
 
     </header>
+        <!--====================================================
+                        CONTENIDO PRINCIPAL
+    ====================================================-->
 
-    <!--====================================
-            BARRA DE NAVEGACIÓN
-=====================================-->
+    <main>
 
-    <nav class="navbar">
 
-        <ul class="menu">
+        <!--================================================
+                            BANNER
+        =================================================-->
 
-            <li>
-                <a href="index.html" class="activo">Inicio</a>
-            </li>
+        <section class="hero">
 
-            <li>
-                <a href="ropa.html">Ropa</a>
-            </li>
+            <div class="hero-imagen">
 
-            <li>
-                <a href="calzado.html">Calzado</a>
-            </li>
+                <img
+                    src="img/banner.png"
+                    alt="Nueva colección Urban Style"
+                >
 
-            <li>
-                <a href="accesorios.html">Accesorios</a>
-            </li>
+            </div>
 
-            <li>
-                <a href="contacto.html">Contacto</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-    <!--====================================
-                HERO / BANNER
-=====================================-->
-
-    <section class="hero">
-
-        <div class="hero-banner">
-
-            <img src="img/banner.png" alt="Banner Urban Style">
 
             <div class="hero-contenido">
 
-                <h1>Descubrí tu estilo urbano</h1>
+                <span class="hero-etiqueta">
+                    NUEVA COLECCIÓN 2026
+                </span>
+
+                <h1>
+                    Encontrá tu estilo<br>
+                    con Urban Style
+                </h1>
 
                 <p>
-                    Encontrá las mejores prendas, calzado y accesorios
-                    para renovar tu outfit.
+                    Descubrí las últimas tendencias en ropa,
+                    calzado y accesorios para hombre y mujer.
                 </p>
 
-                <a href="#categorias" class="btn-principal">
-
-                    Explorar colección
-
+                <a
+                    href="html/ropa.html"
+                    class="btn-hero"
+                >
+                    Ver productos
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
+        <!--================================================
+                        CATEGORÍAS
+        =================================================-->
 
-    <!--====================================
-                CATEGORÍAS
-=====================================-->
+        <section class="categorias">
 
-    <section class="categorias" id="categorias">
+            <div class="seccion-encabezado">
 
-        <div class="titulo-seccion">
-
-            <h2>Categorías principales</h2>
-
-            <p>
-
-                Elegí la categoría que querés explorar.
-
-            </p>
-
-        </div>
-
-
-        <div class="contenedor-categorias">
-
-
-            <!-- Ropa -->
-
-            <a href="ropa.html" class="categoria-card">
-
-                <i class="fa-solid fa-shirt"></i>
-
-                <h3>Ropa</h3>
+                <h2>
+                    Explorá nuestras categorías
+                </h2>
 
                 <p>
-
-                    Hombre y Mujer
-
+                    Elegí la categoría que querés descubrir.
                 </p>
 
-            </a>
+            </div>
 
 
+            <div class="categorias-grid">
 
-            <!-- Calzado -->
 
-            <a href="calzado.html" class="categoria-card">
+                <!-- ROPA -->
 
-                <i class="fa-solid fa-shoe-prints"></i>
+                <a
+                    href="html/ropa.html"
+                    class="categoria"
+                >
 
-                <h3>Calzado</h3>
+                    <div class="categoria-icono">
+
+                        <i class="fa-solid fa-shirt"></i>
+
+                    </div>
+
+                    <h3>
+                        Ropa
+                    </h3>
+
+                    <p>
+                        Buzos, remeras, camperas y pantalones.
+                    </p>
+
+                </a>
+
+
+                <!-- CALZADO -->
+
+                <a
+                    href="html/calzado.html"
+                    class="categoria"
+                >
+
+                    <div class="categoria-icono">
+
+                        <i class="fa-solid fa-shoe-prints"></i>
+
+                    </div>
+
+                    <h3>
+                        Calzado
+                    </h3>
+
+                    <p>
+                        Zapatillas urbanas para todos los estilos.
+                    </p>
+
+                </a>
+
+
+                <!-- ACCESORIOS -->
+
+                <a
+                    href="html/accesorios.html"
+                    class="categoria"
+                >
+
+                    <div class="categoria-icono">
+
+                        <i class="fa-solid fa-hat-cowboy"></i>
+
+                    </div>
+
+                    <h3>
+                        Accesorios
+                    </h3>
+
+                    <p>
+                        Gorras, mochilas, riñoneras y mucho más.
+                    </p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+        <!--================================================
+                    PRODUCTOS DESTACADOS
+        =================================================-->
+
+        <section class="productos-destacados">
+
+            <div class="seccion-encabezado">
+
+                <h2>
+                    Productos destacados
+                </h2>
 
                 <p>
-
-                    Modelos urbanos
-
+                    Algunos de los productos más elegidos
+                    por nuestros clientes.
                 </p>
 
-            </a>
+            </div>
 
 
+            <div
+                class="productos-grid"
+                id="productos-destacados"
+            >
 
-            <!-- Accesorios -->
+                <!--
+                    Los productos destacados
+                    serán cargados automáticamente
+                    desde script.js
+                -->
 
-            <a href="accesorios.html" class="categoria-card">
+            </div>
 
-                <i class="fa-solid fa-hat-cowboy"></i>
+        </section>
 
-                <h3>Accesorios</h3>
+
+        <!--================================================
+                        ¿POR QUÉ ELEGIRNOS?
+        =================================================-->
+
+        <section class="beneficios">
+
+            <div class="seccion-encabezado">
+
+                <h2>
+                    ¿Por qué elegir Urban Style?
+                </h2>
 
                 <p>
-
-                    Completá tu outfit
-
+                    Calidad, diseño y confianza en cada compra.
                 </p>
 
-            </a>
-
-        </div>
-
-    </section>
-        <!--====================================
-          PRODUCTOS DESTACADOS
-=====================================-->
-
-    <section class="productos-destacados">
-
-        <div class="titulo-seccion">
-
-            <h2>Productos Destacados</h2>
-
-            <p>
-
-                Descubrí algunos de nuestros productos más populares.
-
-            </p>
-
-        </div>
-
-        <!--
-            Las tarjetas se generarán automáticamente
-            desde JavaScript.
-        -->
-
-        <div class="contenedor-productos" id="contenedor-productos">
-
-        </div>
-
-    </section>
+            </div>
 
 
-
-    <!--====================================
-                NEWSLETTER
-=====================================-->
-
-    <section class="newsletter">
-
-        <div class="newsletter-contenido">
-
-            <h2>Recibí nuestras novedades</h2>
-
-            <p>
-
-                Enterate primero de los nuevos ingresos,
-                descuentos y promociones exclusivas.
-
-            </p>
-
-            <form class="newsletter-form">
-
-                <input
-                    type="email"
-                    placeholder="Ingresá tu correo electrónico">
-
-                <button type="submit">
-
-                    Suscribirme
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
+            <div class="beneficios-grid">
 
 
+                <!-- CALIDAD -->
 
-    <!--====================================
-                    FOOTER
-=====================================-->
+                <article class="beneficio">
+
+                    <div class="beneficio-icono">
+
+                        <i class="fa-solid fa-star"></i>
+
+                    </div>
+
+                    <h3>
+                        Calidad garantizada
+                    </h3>
+
+                    <p>
+                        Trabajamos con prendas seleccionadas
+                        para ofrecer la mejor calidad.
+                    </p>
+
+                </article>
+
+
+                <!-- ENVÍOS -->
+
+                <article class="beneficio">
+
+                    <div class="beneficio-icono">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                    </div>
+
+                    <h3>
+                        Envíos rápidos
+                    </h3>
+
+                    <p>
+                        Enviamos tus pedidos a todo el país
+                        de forma rápida y segura.
+                    </p>
+
+                </article>
+
+
+                <!-- PAGOS -->
+
+                <article class="beneficio">
+
+                    <div class="beneficio-icono">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                    </div>
+
+                    <h3>
+                        Pagos seguros
+                    </h3>
+
+                    <p>
+                        Comprá con total tranquilidad utilizando
+                        medios de pago seguros.
+                    </p>
+
+                </article>
+
+
+                <!-- ATENCIÓN -->
+
+                <article class="beneficio">
+
+                    <div class="beneficio-icono">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h3>
+                        Atención personalizada
+                    </h3>
+
+                    <p>
+                        Estamos para ayudarte antes,
+                        durante y después de tu compra.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!--====================================================
+                            FOOTER
+    ====================================================-->
 
     <footer class="footer">
 
-        <div class="footer-contenido">
+        <div class="footer-contenedor">
 
-            <div class="footer-logo">
 
-                <img src="img/logo.jpg" alt="Urban Style">
+            <!-- INFORMACIÓN -->
+
+            <div class="footer-columna footer-marca">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="img/logo.png"
+                        alt="Urban Style"
+                    >
+
+                </a>
 
                 <p>
-
-                    Urban Style © 2026
-
+                    Moda urbana para quienes buscan
+                    marcar su propio estilo.
                 </p>
 
             </div>
 
 
+            <!-- CATEGORÍAS -->
 
-            <div class="footer-links">
+            <div class="footer-columna">
 
-                <h3>Navegación</h3>
+                <h3>
+                    Categorías
+                </h3>
 
-                <ul>
+                <a href="html/ropa.html">
+                    Ropa
+                </a>
 
-                    <li><a href="index.html">Inicio</a></li>
+                <a href="html/calzado.html">
+                    Calzado
+                </a>
 
-                    <li><a href="ropa.html">Ropa</a></li>
-
-                    <li><a href="calzado.html">Calzado</a></li>
-
-                    <li><a href="accesorios.html">Accesorios</a></li>
-
-                    <li><a href="contacto.html">Contacto</a></li>
-
-                </ul>
-
-            </div>
-
-
-
-            <div class="footer-contacto">
-
-                <h3>Contacto</h3>
-
-                <p>Email: contacto@urbanstyle.com</p>
-
-                <p>Tel: +54 341 123-4567</p>
-
-                <p>Rosario - Santa Fe</p>
+                <a href="html/accesorios.html">
+                    Accesorios
+                </a>
 
             </div>
 
 
+            <!-- NAVEGACIÓN -->
 
-            <div class="footer-redes">
+            <div class="footer-columna">
 
-                <h3>Seguinos</h3>
+                <h3>
+                    Navegación
+                </h3>
 
-                <div class="redes">
+                <a href="index.html">
+                    Inicio
+                </a>
 
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="html/contacto.html">
+                    Contacto
+                </a>
 
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
 
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+            <!-- CONTACTO -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Rosario, Santa Fe
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +54 9 341 000-0000
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@urbanstyle.com
+                </p>
+
+            </div>
+
+
+            <!-- REDES -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Seguinos
+                </h3>
+
+                <div class="redes-sociales">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="TikTok"
+                    >
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
 
                 </div>
 
             </div>
 
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Urban Style. Todos los derechos reservados.
+            </p>
+
         </div>
 
     </footer>
 
-    <!--====================================
-            JAVASCRIPT
-=====================================-->
 
-    <script src="js/script.js"></script>
-    
+    <!--====================================================
+                        SCRIPTS
+    ====================================================-->
+
+    <script src="js/productos.js"></script>
+
+    <script src="js/carrito.js"></script>
+
+    <script src="js/filtros.js"></script>
+
+    <script src="script.js"></script>
+
 
 </body>
 

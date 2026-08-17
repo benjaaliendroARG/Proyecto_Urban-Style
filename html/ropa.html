@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <!--================================================
+                        CONFIGURACIÓN
+    =================================================-->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Colección de ropa Urban Style"
+    >
+
+    <title>
+        Ropa | Urban Style
+    </title>
+
+
+    <!--================================================
+                        FUENTES
+    =================================================-->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!--================================================
+                    ICONOS FONT AWESOME
+    =================================================-->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!--================================================
+                    ESTILOS PRINCIPALES
+    =================================================-->
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+
+    <!--================================================
+                    ESTILOS DE ROPA
+    =================================================-->
+
+    <link
+        rel="stylesheet"
+        href="../css/ropa.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!--================================================
+                        HEADER
+    =================================================-->
+
+    <header class="header">
+
+        <div class="header-contenedor">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="../index.html"
+                class="logo"
+                aria-label="Urban Style - Inicio"
+            >
+
+                <img
+                    src="../img/logo.png"
+                    alt="Logo Urban Style"
+                >
+
+            </a>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar productos..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="btn-buscar"
+                    aria-label="Buscar"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ACCIONES -->
+
+            <div class="acciones-header">
+
+
+                <!-- FAVORITOS -->
+
+                <button
+                    type="button"
+                    class="btn-header"
+                    id="btn-favoritos"
+                    aria-label="Favoritos"
+                    title="Favoritos"
+                >
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <!-- CARRITO -->
+
+                <button
+                    type="button"
+                    class="btn-header carrito-header"
+                    id="btn-carrito"
+                    aria-label="Carrito"
+                    title="Carrito"
+                >
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span
+                        class="contador-carrito"
+                        id="contador-carrito"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+        <!--================================================
+                            NAVBAR
+        =================================================-->
+
+        <nav class="navbar">
+
+            <div class="nav-contenedor">
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Inicio
+                </a>
+
+                <a
+                    href="ropa.html"
+                    class="nav-link activo"
+                >
+                    Ropa
+                </a>
+
+                <a
+                    href="calzado.html"
+                    class="nav-link"
+                >
+                    Calzado
+                </a>
+
+                <a
+                    href="accesorios.html"
+                    class="nav-link"
+                >
+                    Accesorios
+                </a>
+
+                <a
+                    href="contacto.html"
+                    class="nav-link"
+                >
+                    Contacto
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!--================================================
+                    CONTENIDO PRINCIPAL
+    =================================================-->
+
+    <main>
+        <!--================================================
+                    ENCABEZADO DE ROPA
+    =================================================-->
+
+    <section class="ropa-encabezado">
+
+        <div class="seccion-encabezado">
+
+            <span class="ropa-etiqueta">
+                URBAN STYLE
+            </span>
+
+            <h1>
+                Colección de ropa
+            </h1>
+
+            <p>
+                Descubrí nuestra colección de prendas urbanas,
+                cómodas y pensadas para tu estilo.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!--================================================
+                        FILTROS
+    =================================================-->
+
+    <section class="filtros-ropa">
+
+        <div class="filtros-contenedor">
+
+
+            <!-- FILTRO CATEGORÍA -->
+
+            <div class="filtro-grupo">
+
+                <label for="filtro-categoria">
+                    Categoría
+                </label>
+
+                <select
+                    id="filtro-categoria"
+                >
+
+                    <option value="todos">
+                        Todas
+                    </option>
+
+                    <option value="Hombre">
+                        Hombre
+                    </option>
+
+                    <option value="Mujer">
+                        Mujer
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FILTRO TIPO -->
+
+            <div class="filtro-grupo">
+
+                <label for="filtro-tipo">
+                    Tipo de prenda
+                </label>
+
+                <select
+                    id="filtro-tipo"
+                >
+
+                    <option value="todos">
+                        Todas
+                    </option>
+
+                    <option value="Buzos">
+                        Buzos
+                    </option>
+
+                    <option value="Camperas">
+                        Camperas
+                    </option>
+
+                    <option value="Remeras">
+                        Remeras
+                    </option>
+
+                    <option value="Jeans">
+                        Jeans
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ORDEN -->
+
+            <div class="filtro-grupo">
+
+                <label for="orden-productos">
+                    Ordenar
+                </label>
+
+                <select
+                    id="orden-productos"
+                >
+
+                    <option value="destacados">
+                        Destacados
+                    </option>
+
+                    <option value="menor">
+                        Menor precio
+                    </option>
+
+                    <option value="mayor">
+                        Mayor precio
+                    </option>
+
+                    <option value="nombre">
+                        Nombre
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- LIMPIAR FILTROS -->
+
+            <button
+                type="button"
+                id="btn-limpiar-filtros"
+                class="btn-limpiar-filtros"
+            >
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Limpiar filtros
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!--================================================
+                    PRODUCTOS DE ROPA
+    =================================================-->
+
+    <section class="productos-ropa">
+
+        <div class="productos-ropa-encabezado">
+
+            <div>
+
+                <h2>
+                    Prendas disponibles
+                </h2>
+
+                <p id="cantidad-productos">
+                    Mostrando productos
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!--================================================
+                    CONTENEDOR PRODUCTOS
+        =================================================-->
+
+        <div
+            class="productos-grid"
+            id="productos-ropa"
+        >
+
+            <!--
+                Las tarjetas serán creadas
+                automáticamente por ropa.js.
+            -->
+
+        </div>
+
+
+        <!--================================================
+                    MENSAJE SIN RESULTADOS
+        =================================================-->
+
+        <div
+            class="sin-resultados"
+            id="sin-resultados"
+        >
+
+            <div class="sin-resultados-icono">
+
+                <i class="fa-solid fa-shirt"></i>
+
+            </div>
+
+            <h3>
+                No encontramos productos
+            </h3>
+
+            <p>
+                Probá cambiar los filtros para
+                encontrar otras prendas.
+            </p>
+
+        </div>
+
+    </section>
+        <!--================================================
+                        FOOTER
+    =================================================-->
+
+    <footer class="footer">
+
+        <div class="footer-contenedor">
+
+
+            <!-- MARCA -->
+
+            <div class="footer-columna footer-marca">
+
+                <a
+                    href="../index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="../img/logo.png"
+                        alt="Urban Style"
+                    >
+
+                </a>
+
+                <p>
+                    Moda urbana para quienes buscan
+                    marcar su propio estilo.
+                </p>
+
+            </div>
+
+
+            <!-- CATEGORÍAS -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Categorías
+                </h3>
+
+                <a href="ropa.html">
+                    Ropa
+                </a>
+
+                <a href="calzado.html">
+                    Calzado
+                </a>
+
+                <a href="accesorios.html">
+                    Accesorios
+                </a>
+
+            </div>
+
+
+            <!-- NAVEGACIÓN -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Navegación
+                </h3>
+
+                <a href="../index.html">
+                    Inicio
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <!-- CONTACTO -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Rosario, Santa Fe
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +54 9 341 000-0000
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@urbanstyle.com
+                </p>
+
+            </div>
+
+
+            <!-- REDES -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Seguinos
+                </h3>
+
+                <div class="redes-sociales">
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="TikTok"
+                    >
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Urban Style. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!--================================================
+                        SCRIPTS
+    =================================================-->
+
+
+    <script src="../js/productos.js"></script>
+    
+    <script src="../js/ropa.js"></script>
+
+    <script src="../js/carrito.js"></script>
+
+    <script src="../js/filtros.js"></script>
+
+    <script src="../script.js"></script>
+
+    
+
+</body>
+
+</html>
