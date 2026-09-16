@@ -1,0 +1,451 @@
+/* =====================================================
+   URBAN STYLE
+   CALZADO
+===================================================== */
+
+
+/* =====================================================
+   PAGINA
+===================================================== */
+
+.pagina-calzado {
+    width: 100%;
+    min-height: 100vh;
+    padding: 70px 6% 90px;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado-calzado {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+
+.icono-calzado {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    font-size: 28px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.icono-calzado:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.encabezado-calzado h1 {
+    margin: 0 0 12px;
+
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+.encabezado-calzado p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
+.filtros-calzado {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+
+    padding: 22px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 18px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+}
+
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filtro-grupo label {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.filtro-grupo select {
+    min-width: 190px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(20, 20, 20, 0.95);
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.filtro-grupo select:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.filtro-grupo select:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.filtro-grupo option {
+    background: #151515;
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CANTIDAD DE PRODUCTOS
+===================================================== */
+
+.cantidad-calzado {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+}
+
+.cantidad-calzado p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 14px;
+}
+
+.cantidad-calzado span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   GRID DE PRODUCTOS
+===================================================== */
+
+.productos-calzado {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+#productos-calzado {
+    width: 100%;
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+#productos-calzado .producto-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+#productos-calzado .producto-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+#productos-calzado .producto-imagen {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: #111111;
+}
+
+#productos-calzado .producto-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.5s ease;
+}
+
+#productos-calzado .producto-card:hover
+.producto-imagen img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   INFORMACION
+===================================================== */
+
+#productos-calzado .producto-info {
+    padding: 20px;
+}
+
+#productos-calzado .producto-categoria {
+    margin: 0 0 7px;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+#productos-calzado .producto-info h3 {
+    margin: 0 0 10px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #ffffff;
+
+    line-height: 1.4;
+}
+
+#productos-calzado .producto-info h2 {
+    margin: 0 0 18px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+#productos-calzado .producto-botones {
+    display: flex;
+    gap: 10px;
+}
+
+#productos-calzado .btn-favorito {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+#productos-calzado .btn-favorito:hover {
+    transform: scale(1.05);
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#productos-calzado .btn-comprar {
+    flex: 1;
+
+    min-height: 45px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+#productos-calzado .btn-comprar:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   SIN PRODUCTOS
+===================================================== */
+
+.sin-productos {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.sin-productos i {
+    margin-bottom: 20px;
+
+    font-size: 45px;
+
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.sin-productos h2 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+.sin-productos p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .pagina-calzado {
+        padding: 50px 5% 70px;
+    }
+
+    .filtros-calzado {
+        justify-content: stretch;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .filtro-grupo select {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .encabezado-calzado h1 {
+        font-size: 35px;
+    }
+
+    .encabezado-calzado p {
+        font-size: 14px;
+    }
+
+    .filtros-calzado {
+        padding: 16px;
+    }
+
+    #productos-calzado .producto-info {
+        padding: 16px;
+    }
+
+    #productos-calzado .producto-info h3 {
+        font-size: 14px;
+    }
+
+}

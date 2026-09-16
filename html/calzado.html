@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Calzado | Urban Style</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../img/logo.png"
+    >
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS GENERAL -->
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+    <!-- CSS CALZADO -->
+
+    <link
+        rel="stylesheet"
+        href="../css/calzado.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header class="header">
+
+
+        <!-- ================================
+             PARTE SUPERIOR
+        ================================= -->
+
+        <div class="header-contenedor">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+
+                <img
+                    src="../img/logo.png"
+                    alt="Urban Style"
+                >
+
+            </a>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar productos..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="btn-buscar"
+                    type="button"
+                    aria-label="Buscar"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ACCIONES -->
+
+            <div class="acciones-header">
+
+
+                <!-- FAVORITOS -->
+
+                <button
+                    id="btn-favoritos"
+                    type="button"
+                    title="Favoritos"
+                    aria-label="Favoritos"
+                >
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <!-- CARRITO -->
+
+                <button
+                    id="btn-carrito"
+                    type="button"
+                    title="Carrito"
+                    aria-label="Carrito"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span id="contador-carrito">
+                        0
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             NAVEGACIÓN
+        ================================================== -->
+
+        <nav class="nav">
+
+
+            <a
+                href="../index.html"
+                class="nav-link"
+            >
+                Inicio
+            </a>
+
+
+            <a
+                href="ropa.html"
+                class="nav-link"
+            >
+                Ropa
+            </a>
+
+
+            <a
+                href="calzado.html"
+                class="nav-link activo"
+            >
+                Calzado
+            </a>
+
+
+            <a
+                href="accesorios.html"
+                class="nav-link"
+            >
+                Accesorios
+            </a>
+
+
+            <a
+                href="contacto.html"
+                class="nav-link"
+            >
+                Contacto
+            </a>
+
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =================================================
+         CONTENIDO
+    ================================================== -->
+
+    <main class="pagina-calzado">
+
+
+        <!-- ================================
+             ENCABEZADO
+        ================================= -->
+
+        <section class="encabezado-calzado">
+
+            <div class="icono-calzado">
+
+                <i class="fa-solid fa-shoe-prints"></i>
+
+            </div>
+
+
+            <h1>
+                Calzado
+            </h1>
+
+
+            <p>
+                Descubrí nuestra colección de calzado urbano
+                para completar tu estilo.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================================
+             FILTROS
+        ================================= -->
+
+        <section class="filtros-calzado">
+
+
+            <div class="filtro-grupo">
+
+                <label for="filtro-genero">
+                    Género
+                </label>
+
+
+                <select id="filtro-genero">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="Hombre">
+                        Hombre
+                    </option>
+
+                    <option value="Mujer">
+                        Mujer
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="filtro-grupo">
+
+                <label for="filtro-orden">
+                    Ordenar por
+                </label>
+
+
+                <select id="filtro-orden">
+
+                    <option value="default">
+                        Más relevantes
+                    </option>
+
+                    <option value="menor">
+                        Menor precio
+                    </option>
+
+                    <option value="mayor">
+                        Mayor precio
+                    </option>
+
+                    <option value="nombre">
+                        Nombre A-Z
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================================
+             CANTIDAD
+        ================================= -->
+
+        <div class="cantidad-calzado">
+
+            <p>
+
+                <span id="cantidad-productos">
+                    0
+                </span>
+
+                productos disponibles
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ================================
+             PRODUCTOS
+        ================================= -->
+
+        <section class="productos-calzado">
+
+
+            <div
+                class="productos-grid"
+                id="productos-calzado"
+            ></div>
+
+
+            <!-- SIN PRODUCTOS -->
+
+            <div
+                class="sin-productos"
+                id="sin-productos"
+                style="display: none;"
+            >
+
+                <i class="fa-solid fa-box-open"></i>
+
+
+                <h2>
+                    No encontramos productos
+                </h2>
+
+
+                <p>
+                    Probá seleccionando otro filtro.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-contenedor">
+
+
+            <!-- COLUMNA 1 -->
+
+            <div class="footer-columna">
+
+
+                <div class="footer-logo">
+
+                    <img
+                        src="../img/logo.png"
+                        alt="Urban Style"
+                    >
+
+                </div>
+
+
+                <p>
+                    Moda urbana para encontrar
+                    tu propio estilo.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- COLUMNA 2 -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Categorías
+                </h3>
+
+
+                <a href="ropa.html">
+                    Ropa
+                </a>
+
+
+                <a href="calzado.html">
+                    Calzado
+                </a>
+
+
+                <a href="accesorios.html">
+                    Accesorios
+                </a>
+
+            </div>
+
+
+
+            <!-- COLUMNA 3 -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Navegación
+                </h3>
+
+
+                <a href="../index.html">
+                    Inicio
+                </a>
+
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </div>
+
+
+
+            <!-- COLUMNA 4 -->
+
+            <div class="footer-columna">
+
+                <h3>
+                    Contacto
+                </h3>
+
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Rosario, Santa Fe
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +54 9 341 000-0000
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    urbanstyle@gmail.com
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Urban Style. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="../js/productos.js"></script>
+
+    <script src="../js/carrito.js"></script>
+
+    <script src="../js/filtros.js"></script>
+
+    <script src="../script.js"></script>
+
+    <script src="../js/calzado.js"></script>
+
+
+</body>
+
+</html>
